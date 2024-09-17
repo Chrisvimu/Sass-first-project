@@ -1,6 +1,31 @@
 body {
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #333;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+navbar {
+  background-color: #FFEFE7;
+  width: 100%;
+  height: 3rem;
+  color: #7C6A0A;
+  font-family: "IBM Plex Sans", sans-serif;
+  padding: 1rem;
+}
+
+main {
+  background-color: #FFDAC6;
+  color: #7C6A0A;
+  font-family: "IBM Plex Sans", sans-serif;
+  padding: 1rem;
+  width: 100%;
+}
+
+footer {
+  background-color: #fa9500;
+  width: 100%;
+  height: 15rem;
+  color: #7C6A0A;
+  font-family: "IBM Plex Sans", sans-serif;
+  padding: 1rem;
 }/*# sourceMappingURL=style.css.map */
