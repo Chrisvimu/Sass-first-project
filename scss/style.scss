@@ -4,6 +4,11 @@ $tertiary-color:#BABD8D;
 $primary-text-color:#7C6A0A;
 $font-stack: 'IBM Plex Sans' , sans-serif; 
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
 body {
     margin: 0;
