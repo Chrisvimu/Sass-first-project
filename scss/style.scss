@@ -134,6 +134,42 @@ article {
     }
 }
 
+section {
+    background-color: green;
+    color: $primary-text-color;
+    font-family: $font-stack;
+    padding: 1rem;
+    width: 100%;
+    height: auto;
+
+    h2{
+        color: $primary-text-color;
+        font-size: 2em;
+    }
+    .healthcare{
+        h2{
+            font-weight: 300;
+            padding-bottom: 2em;
+        }
+        .product-card{
+            width: 20vw;
+            height: auto;
+            background-color: purple;
+            color: $primary-text-color;
+            padding: 1rem;
+            border-radius: 1rem;
+
+            img {
+                width: 100%;
+                max-width: 100vw;
+                overflow: hidden;
+                height: auto;
+                padding: 0.5rem;
+            }
+        }
+    }
+}
+
 main {
     background-color: $secundary-color;
     color: $primary-text-color;

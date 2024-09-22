@@ -117,6 +117,38 @@ article .image-section img {
   border-radius: 10.5rem;
 }
 
+section {
+  background-color: green;
+  color: #7C6A0A;
+  font-family: "IBM Plex Sans", sans-serif;
+  padding: 1rem;
+  width: 100%;
+  height: auto;
+}
+section h2 {
+  color: #7C6A0A;
+  font-size: 2em;
+}
+section .healthcare h2 {
+  font-weight: 300;
+  padding-bottom: 2em;
+}
+section .healthcare .product-card {
+  width: 20vw;
+  height: auto;
+  background-color: purple;
+  color: #7C6A0A;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+section .healthcare .product-card img {
+  width: 100%;
+  max-width: 100vw;
+  overflow: hidden;
+  height: auto;
+  padding: 0.5rem;
+}
+
 main {
   background-color: #FFDAC6;
   color: #7C6A0A;
