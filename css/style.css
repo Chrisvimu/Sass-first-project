@@ -160,9 +160,9 @@ section .healthcare .card-section, section .furniture .card-section {
   flex-wrap: wrap;
 }
 section .healthcare .product-card, section .furniture .product-card {
+  background-color: purple;
   width: 20vw;
   height: auto;
-  background-color: purple;
   color: #7C6A0A;
   padding: 0.5rem;
   border-radius: 1rem;
@@ -206,20 +206,6 @@ section .healthcare .product-card .product-image img, section .furniture .produc
      object-fit: cover;
 }
 
-.furniture {
-  display: flex;
-  flex-wrap: wrap;
-}
-.furniture .card-section {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  -moz-column-gap: 8vw;
-       column-gap: 8vw;
-  row-gap: 4vh;
-  align-self: center;
-}
-
 main {
   background-color: #FFDAC6;
   color: #7C6A0A;
@@ -228,8 +214,19 @@ main {
   width: 100%;
 }
 
+.furniture {
+  background-color: purple;
+}
+.furniture .card-section {
+  background-color: rgb(192, 246, 255);
+}
+.furniture .product-card {
+  background-color: #0a547c;
+  color: white;
+}
+
 footer {
-  background-color: #FA9500;
+  background-color: #FFEFE7;
   width: 100%;
   height: 15rem;
   color: #7C6A0A;
