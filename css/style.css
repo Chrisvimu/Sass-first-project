@@ -21,6 +21,15 @@ body {
   font-family: "IBM Plex Sans", sans-serif;
 }
 
+.navbar {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3em;
+}
+
 nav {
   width: 100%;
   display: flex;
@@ -45,6 +54,14 @@ nav .icons button svg {
   stroke: #7C6A0A;
   width: 2em;
   height: 2em;
+  stroke-width: 2em;
+  cursor: pointer;
+}
+nav .icons button svg :hover {
+  stroke: yellow;
+  fill: pink;
+  width: 4em;
+  height: 4em;
 }
 
 article {
@@ -56,6 +73,7 @@ article {
   display: flex;
   width: auto;
   justify-content: space-between;
+  padding-top: 2em;
 }
 article h1 {
   font-size: 3em;
@@ -107,6 +125,87 @@ article .image-section img {
   border-radius: 10.5rem;
 }
 
+section {
+  background-color: green;
+  color: #7C6A0A;
+  font-family: "IBM Plex Sans", sans-serif;
+  padding: 1rem;
+  width: 100%;
+  height: auto;
+}
+section h2 {
+  color: #7C6A0A;
+  font-size: 2em;
+  height: auto;
+  font-weight: bold;
+  font-style: italic;
+}
+section .healthcare h2, section .furniture h2 {
+  font-weight: 300;
+  padding-bottom: 1em;
+  height: auto;
+}
+section .healthcare .card-section, section .furniture .card-section {
+  background-color: #FA9500;
+  display: flex;
+  width: auto;
+  height: auto;
+  padding: 0.5rem;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 8vw;
+       column-gap: 8vw;
+  row-gap: 4vh;
+  flex-wrap: wrap;
+}
+section .healthcare .product-card, section .furniture .product-card {
+  background-color: purple;
+  width: 20vw;
+  height: auto;
+  color: #7C6A0A;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  justify-items: center;
+}
+section .healthcare .product-card .icon, section .furniture .product-card .icon {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.2rem;
+}
+section .healthcare .product-card .icon svg, section .furniture .product-card .icon svg {
+  stroke: black;
+  stroke-width: 3em;
+  stroke-linecap: round;
+  width: 1em;
+  height: 1em;
+  cursor: pointer;
+}
+section .healthcare .product-card .icon svg :hover, section .furniture .product-card .icon svg :hover {
+  stroke: red;
+  fill: red;
+  width: 3em;
+  height: 3em;
+}
+section .healthcare .product-card .product-image, section .furniture .product-card .product-image {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0%;
+}
+section .healthcare .product-card .product-image img, section .furniture .product-card .product-image img {
+  width: 85%;
+  max-width: 100vw;
+  overflow: hidden;
+  height: auto;
+  padding: 0.2rem;
+  border-radius: 0.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 main {
   background-color: #FFDAC6;
   color: #7C6A0A;
@@ -115,8 +214,19 @@ main {
   width: 100%;
 }
 
+.furniture {
+  background-color: purple;
+}
+.furniture .card-section {
+  background-color: rgb(192, 246, 255);
+}
+.furniture .product-card {
+  background-color: #0a547c;
+  color: white;
+}
+
 footer {
-  background-color: #FA9500;
+  background-color: #FFEFE7;
   width: 100%;
   height: 15rem;
   color: #7C6A0A;
