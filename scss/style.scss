@@ -235,13 +235,25 @@ main {
 
 .furniture {
     @extend .healthcare;
-    background-color: purple;
+    background-color: yellow;
     .card-section {
-        background-color: rgb(192, 246, 255);
-    }
-    .product-card {
-        background-color: #0a547c;
-        color: white;
+        background-color: rgb(101, 45, 79);
+        .product-card {
+            background-color: blue;
+            color: white;
+            .product-image {
+                background-color: royalblue;
+            }
+            .icon {
+                background-color: rgb(176, 176, 21);
+            }
+            h3 {
+                background-color: rgb(59, 73, 118);
+            }
+            p{
+                background-color: yellow;
+            }
+        }
     }
 }
 
