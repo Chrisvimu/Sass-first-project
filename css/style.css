@@ -215,14 +215,26 @@ main {
 }
 
 .furniture {
-  background-color: purple;
+  background-color: yellow;
 }
 .furniture .card-section {
-  background-color: rgb(192, 246, 255);
+  background-color: rgb(101, 45, 79);
 }
-.furniture .product-card {
-  background-color: #0a547c;
+.furniture .card-section .product-card {
+  background-color: blue;
   color: white;
+}
+.furniture .card-section .product-card .product-image {
+  background-color: royalblue;
+}
+.furniture .card-section .product-card .icon {
+  background-color: rgb(176, 176, 21);
+}
+.furniture .card-section .product-card h3 {
+  background-color: rgb(59, 73, 118);
+}
+.furniture .card-section .product-card p {
+  background-color: yellow;
 }
 
 footer {
