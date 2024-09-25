@@ -7,6 +7,17 @@ $paragraph-font-size: 1.5em;
 $quaternary-color: #FA9500;
 $button-text-color: white;
 
+// Define variables for image size
+$product-image-width: 10rem; // Example value
+$product-image-height: 8rem; // Example value
+
+// Define the mixin
+@mixin image-size($width, $height) {
+    width: $width;
+    height: $height;
+    object-fit: cover; // Ensures the image covers the area without distortion
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -264,4 +275,9 @@ footer {
     color: $primary-text-color;
     font-family: $font-stack;
     padding: 1rem;
+}
+
+// Use the mixin in the classes
+.product-image {
+    @include image-size($image-width, $image-height);
 }
