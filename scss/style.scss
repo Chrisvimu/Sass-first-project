@@ -18,6 +18,21 @@ $product-image-height: 8rem; // Example value
     object-fit: cover; // Ensures the image covers the area without distortion
 }
 
+@mixin flex-center ($direction,$content,$align){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-items: $align;
+}
+
+@mixin button-style(){
+    button{
+        background: none;
+        border-style: none;
+        cursor: pointer;
+    }
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -50,8 +65,7 @@ body {
 }
 nav {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+    @include flex-center (row,space-between,center);
     color: $primary-text-color;
     padding: 0.5em;
 
@@ -64,10 +78,7 @@ nav {
         gap: 0.8em;
 
         button {
-            background: none;
-            border-style: none;
-            cursor: pointer;
-
+            @include button-style;
             svg {
             stroke: $primary-text-color;
             width: 2em;
@@ -87,14 +98,13 @@ nav {
 
 article {
   //  background-color: $primary-color;
-     background-color: blue;
+  @include flex-center (row,space-between,center);
+    background-color: blue;
     color: $primary-text-color;
     font-family: $font-stack;
     padding-left: 1rem;
     padding-right: 1rem;
-    display: flex;
     width: auto;
-    justify-content: space-between;
     padding-top: 2em;
 
     h1 {
@@ -107,11 +117,8 @@ article {
         font-size: $paragraph-font-size;
     }
 
+    @include button-style;
     button{
-        display: flex;
-        border: none;
-        background: none;
-        border-style: none;
         width: 15vw;
         height: auto;
         background-color: $quaternary-color;
@@ -177,13 +184,14 @@ section {
         }
         .card-section{
             background-color: #FA9500;
-            display: flex;
+//            display: flex;
+            @include flex-center (row,space-evenly,center);
             width: auto;
             height: auto;
             padding: 0.5rem;
             justify-items: center;
-            justify-content: center;
-            align-items: center;
+//            justify-content: center;
+//            align-items: center;
             column-gap: 8vw;
             row-gap: 4vh;
             flex-wrap: wrap;
