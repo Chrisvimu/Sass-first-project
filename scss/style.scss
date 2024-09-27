@@ -299,30 +299,39 @@ main {
     }
 }
 
-.about-us {
-    @extend .healthcare;
-    background-color: #7C6A0A;
-    .mission-section {
-        @include flex-center(row,space-evenly,center);
-        background-color: aqua;
-        .earth{
-            display: flex;
-            background-color: chartreuse;
-        }
-        .innovation{
-            display: flex;
-            background-color: darkorange;
-        }
-    }
-    h2{
-        font-size: fluid-type(3, 3.5);
+.info-section {
+    .about-us {
+        @extend .healthcare;
         padding-bottom: 1em;
-        height: auto;
-        font-weight: bold;
-        font-style: italic;
-    }
-    p{
-        font-size: fluid-type(1, 1.5);
+        background-color: #293e86;
+        .mision-section {
+            @include flex-center(row, space-evenly, center);
+            background-color: aqua;
+            .earth {
+                background-color: chartreuse;
+                gap: 1em;
+                width: 30vw;
+                img{
+                    object-fit: cover;
+                }
+            }
+            .innovation {
+                @extend .earth;
+            }
+        }
+        h2 {
+            font-size: fluid-type(3, 3.5);
+            padding-bottom: 1em;
+            height: auto;
+            font-weight: bold;
+            font-style: italic;
+        }
+        p {
+            font-size: fluid-type(2,1.5);
+            text-align: center;
+            color: $quaternary-color;
+
+        }
     }
 }
 
