@@ -206,7 +206,7 @@ section {
         .card-section{
             background-color: #FA9500;
 //            display: flex;
-            @include flex-center (row,space-evenly,center);
+            @include flex-center(row,space-evenly,center);
             width: auto;
             height: auto;
             padding: 0.5rem;
@@ -299,8 +299,21 @@ main {
     }
 }
 
-.about-us{
+.about-us {
     @extend .healthcare;
+    background-color: #7C6A0A;
+    .mission-section {
+        @include flex-center(row,space-evenly,center);
+        background-color: aqua;
+        .earth{
+            display: flex;
+            background-color: chartreuse;
+        }
+        .innovation{
+            display: flex;
+            background-color: darkorange;
+        }
+    }
     h2{
         font-size: fluid-type(3, 3.5);
         padding-bottom: 1em;
@@ -311,7 +324,6 @@ main {
     p{
         font-size: fluid-type(1, 1.5);
     }
-
 }
 
 footer {
@@ -323,6 +335,7 @@ footer {
     font-size: fluid-type(1, 1.5);
     padding: 1rem;
 }
+
 
 // Use the mixin in the classes
 .product-image {

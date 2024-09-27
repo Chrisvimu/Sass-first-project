@@ -248,6 +248,24 @@ main {
   background-color: yellow;
 }
 
+.about-us {
+  background-color: #7C6A0A;
+}
+.about-us .mission-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: aqua;
+}
+.about-us .mission-section .earth {
+  display: flex;
+  background-color: chartreuse;
+}
+.about-us .mission-section .innovation {
+  display: flex;
+  background-color: darkorange;
+}
 .about-us h2 {
   font-size: calc(3rem + (3.5 - 3) * (100vw - 20vw) / (100 - 20));
   padding-bottom: 1em;
