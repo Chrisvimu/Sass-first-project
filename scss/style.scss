@@ -87,12 +87,14 @@ body {
 nav {
     width: 100%;
     @include flex-center (row,space-between,center);
-    color: $primary-text-color;
+    background-color: $secundary-color;
+    color: $tertiary-color;
     padding: 0.5em;
 
     p {
         font-size: $paragraph-font-size;
         padding-left: 1em;
+        font-weight: bold;
     }
     .icons {
         display:flex;
@@ -101,11 +103,13 @@ nav {
         button {
             @include button-style;
             svg {
-            stroke: $primary-text-color;
+            stroke: $tertiary-color;
             width: 2em;
             height: 2em;
             stroke-width: 2em;
             cursor: pointer;
+            background-color: $secundary-color;
+            margin: 0%;
             :hover {
                 stroke:yellow;
                 fill: pink;
@@ -118,9 +122,9 @@ nav {
 }
 
 article {
-  //  background-color: $primary-color;
+  background-color: $primary-color;
   @include flex-center (row,space-between,center);
-    background-color: blue;
+    background-color: $primary-color;
     color: $primary-text-color;
     font-family: $font-stack;
     padding-left: 1rem;
@@ -166,7 +170,7 @@ article {
         font-family: $font-stack;
         padding-left: 1rem;
         padding-right: 1rem;
-        background-color: greenyellow;
+        background-color: $primary-color;
         text-align: justify;
         row-gap: 1.2rem;
         display: flex;
@@ -180,7 +184,7 @@ article {
       //  padding-left: 1rem;
       //  padding-right: 1rem;
         padding: 0.4%;
-        background-color: red;
+        background-color: $primary-color;
         img {
             width: 100%;
             max-width: 90vw;
@@ -191,7 +195,7 @@ article {
 }
 
 section {
-    background-color: green;
+    background-color: $primary-color;
     color: $primary-text-color;
     font-family: $font-stack;
     padding: 1rem;
@@ -214,7 +218,7 @@ section {
             
         }
         .card-section{
-            background-color: #FA9500;
+            background-color: $primary-color;
 //            display: flex;
             @include flex-center(row,space-evenly,center);
             width: auto;
@@ -229,7 +233,7 @@ section {
             font-size: fluid-type(1, 1.5);
         }
         .product-card{
-            background-color: purple;
+            background-color: $secundary-color;
             width: 20vw;
             height: auto;
             color: $primary-text-color;
@@ -283,7 +287,7 @@ section {
 }
 
 main {
-    background-color: $secundary-color;
+    background-color: $primary-color;
     color: $primary-text-color;
     font-family: $font-stack;
     padding: 1rem;
@@ -292,23 +296,23 @@ main {
 
 .furniture {
     @extend .healthcare;
-    background-color: yellow;
+    background-color: $primary-color;
     .card-section {
-        background-color: rgb(101, 45, 79);
+        background-color: $tertiary-color;
         .product-card {
-            background-color: blue;
+            background-color: $tertiary-color;
             color: white;
             .product-image {
-                background-color: royalblue;
+                background-color: $tertiary-color;
             }
             .icon {
-                background-color: rgb(176, 176, 21);
+                background-color: $tertiary-color;
             }
             h3 {
-                background-color: rgb(59, 73, 118);
+                background-color: $tertiary-color;
             }
             p{
-                background-color: yellow;
+                background-color: $tertiary-color;
             }
         }
     }
@@ -316,19 +320,21 @@ main {
 
 .info-section {
     height: auto;
+    background-color: $primary-color;
     .about-us {
         @include flex-center(row, space-evenly, center);
         height: auto;
         @extend .healthcare;
         padding-bottom: 1em;
-        background-color: #293e86;
+        background-color: $primary-color;
         .mision-section {
             @include flex-center(row, space-evenly, center);
-            background-color: aqua;
+            background-color: $primary-color;
             height: auto;
             max-width: 92vw;
+            color: $intense-text-color;
             .earth {
-                background-color: $secundary-color;
+                background-color: $primary-color;
                 gap: 1em;
                 width: auto;
                 max-width: 40vw;
@@ -351,18 +357,20 @@ main {
             height: auto;
             font-weight: bold;
             font-style: italic;
+            color: $intense-text-color;
+            background-color: $primary-color;
         }
         p {
             font-size: fluid-type(2,1.5);
             text-align: center;
             color: $quaternary-color;
-
+            background-color: $primary-color;
         }
     }
 }
 
 .gallery {
-    background-color: $tertiary-color;
+    background-color: $primary-color;
     color: $primary-text-color;
     font-family: $font-stack;
     width: 100%;

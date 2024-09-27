@@ -35,12 +35,14 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  color: #7C6A0A;
+  background-color: #FFDAC6;
+  color: #BABD8D;
   padding: 0.5em;
 }
 nav p {
   font-size: 1.5em;
   padding-left: 1em;
+  font-weight: bold;
 }
 nav .icons {
   display: flex;
@@ -52,11 +54,13 @@ nav .icons button button {
   cursor: pointer;
 }
 nav .icons button svg {
-  stroke: #7C6A0A;
+  stroke: #BABD8D;
   width: 2em;
   height: 2em;
   stroke-width: 2em;
   cursor: pointer;
+  background-color: #FFDAC6;
+  margin: 0%;
 }
 nav .icons button svg :hover {
   stroke: yellow;
@@ -66,11 +70,12 @@ nav .icons button svg :hover {
 }
 
 article {
+  background-color: #FFEFE7;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: blue;
+  background-color: #FFEFE7;
   color: #7C6A0A;
   font-family: "IBM Plex Sans", sans-serif;
   padding-left: 1rem;
@@ -117,7 +122,7 @@ article .impact-section {
   font-family: "IBM Plex Sans", sans-serif;
   padding-left: 1rem;
   padding-right: 1rem;
-  background-color: greenyellow;
+  background-color: #FFEFE7;
   text-align: justify;
   row-gap: 1.2rem;
   display: flex;
@@ -129,7 +134,7 @@ article .image-section {
   color: #7C6A0A;
   font-family: "IBM Plex Sans", sans-serif;
   padding: 0.4%;
-  background-color: red;
+  background-color: #FFEFE7;
 }
 article .image-section img {
   width: 100%;
@@ -139,7 +144,7 @@ article .image-section img {
 }
 
 section {
-  background-color: green;
+  background-color: #FFEFE7;
   color: #7C6A0A;
   font-family: "IBM Plex Sans", sans-serif;
   padding: 1rem;
@@ -160,7 +165,7 @@ section .healthcare h2, section .info-section .about-us h2, .info-section sectio
   height: auto;
 }
 section .healthcare .card-section, section .info-section .about-us .card-section, .info-section section .about-us .card-section, section .furniture .card-section {
-  background-color: #FA9500;
+  background-color: #FFEFE7;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -176,7 +181,7 @@ section .healthcare .card-section, section .info-section .about-us .card-section
   font-size: calc(1rem + (1.5 - 1) * (100vw - 20vw) / (100 - 20));
 }
 section .healthcare .product-card, section .info-section .about-us .product-card, .info-section section .about-us .product-card, section .furniture .product-card {
-  background-color: purple;
+  background-color: #FFDAC6;
   width: 20vw;
   height: auto;
   color: #7C6A0A;
@@ -229,7 +234,7 @@ section .healthcare .product-card:hover, section .info-section .about-us .produc
 }
 
 main {
-  background-color: #FFDAC6;
+  background-color: #FFEFE7;
   color: #7C6A0A;
   font-family: "IBM Plex Sans", sans-serif;
   padding: 1rem;
@@ -237,30 +242,31 @@ main {
 }
 
 .furniture {
-  background-color: yellow;
+  background-color: #FFEFE7;
 }
 .furniture .card-section {
-  background-color: rgb(101, 45, 79);
+  background-color: #BABD8D;
 }
 .furniture .card-section .product-card {
-  background-color: blue;
+  background-color: #BABD8D;
   color: white;
 }
 .furniture .card-section .product-card .product-image {
-  background-color: royalblue;
+  background-color: #BABD8D;
 }
 .furniture .card-section .product-card .icon {
-  background-color: rgb(176, 176, 21);
+  background-color: #BABD8D;
 }
 .furniture .card-section .product-card h3 {
-  background-color: rgb(59, 73, 118);
+  background-color: #BABD8D;
 }
 .furniture .card-section .product-card p {
-  background-color: yellow;
+  background-color: #BABD8D;
 }
 
 .info-section {
   height: auto;
+  background-color: #FFEFE7;
 }
 .info-section .about-us {
   display: flex;
@@ -269,19 +275,20 @@ main {
   align-items: center;
   height: auto;
   padding-bottom: 1em;
-  background-color: #293e86;
+  background-color: #FFEFE7;
 }
 .info-section .about-us .mision-section {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  background-color: aqua;
+  background-color: #FFEFE7;
   height: auto;
   max-width: 92vw;
+  color: #E86424;
 }
 .info-section .about-us .mision-section .earth, .info-section .about-us .mision-section .innovation {
-  background-color: #FFDAC6;
+  background-color: #FFEFE7;
   gap: 1em;
   width: auto;
   max-width: 40vw;
@@ -311,15 +318,18 @@ main {
   height: auto;
   font-weight: bold;
   font-style: italic;
+  color: #E86424;
+  background-color: #FFEFE7;
 }
 .info-section .about-us p {
   font-size: calc(2rem + (1.5 - 2) * (100vw - 20vw) / (100 - 20));
   text-align: center;
   color: #FA9500;
+  background-color: #FFEFE7;
 }
 
 .gallery {
-  background-color: #BABD8D;
+  background-color: #FFEFE7;
   color: #7C6A0A;
   font-family: "IBM Plex Sans", sans-serif;
   width: 100%;
