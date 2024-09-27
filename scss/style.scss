@@ -51,7 +51,7 @@ $product-image-height: 8rem; // Example value
     }
 }
 
-/*
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -62,7 +62,7 @@ $product-image-height: 8rem; // Example value
     max-width: 100vw; 
     font-size: fluid-type(1, 1.5);
 }
-*/
+
 .container {
     max-width: 100vw; // Apply max-width to specific elements if needed
 }
@@ -127,11 +127,13 @@ article {
     padding-right: 1rem;
     width: auto;
     padding-top: 2em;
+    align-items: center;
 
     h1 {
         font-size: fluid-type(3, 3);
         padding:0%;
         margin: 0%;
+        padding-bottom: 1em;
     }
 
     p {
@@ -140,7 +142,7 @@ article {
 
     @include button-style;
     button{
-        width: 15vw;
+        width: 16vw;
         height: auto;
         background-color: $quaternary-color;
         border-radius: 15em;
@@ -150,6 +152,12 @@ article {
         font-size: clamp(1rem, 2.5vw, 2rem);
         justify-content: center;
         align-items: center;
+        margin-left: 25%;
+        &:hover {
+            transform: scale(1.01);
+            z-index: 4;
+            filter: brightness(1.2);
+            }
     }
 
     .impact-section {
@@ -175,7 +183,7 @@ article {
         background-color: red;
         img {
             width: 100%;
-            max-width: 100vw;
+            max-width: 90vw;
             overflow: hidden;
             border-radius: 10.5rem;
         }
@@ -265,6 +273,11 @@ section {
                     object-fit: cover;
                 }       
             }
+            &:hover {
+                transform: scale(1.1);
+                z-index: 10;
+                filter: brightness(1.2);
+                }
         }
     }
 }
@@ -302,23 +315,33 @@ main {
 }
 
 .info-section {
+    height: auto;
     .about-us {
+        @include flex-center(row, space-evenly, center);
+        height: auto;
         @extend .healthcare;
         padding-bottom: 1em;
         background-color: #293e86;
         .mision-section {
             @include flex-center(row, space-evenly, center);
             background-color: aqua;
+            height: auto;
+            max-width: 92vw;
             .earth {
                 background-color: chartreuse;
                 gap: 1em;
-                width: 30vw;
+                width: auto;
+                max-width: 40vw;
                 img{
-                    object-fit: cover;
+                    @include image-size(20vw, 25vh);
                 }
             }
             .innovation {
                 @extend .earth;
+                @include flex-center(column, space-evenly, center);
+                img{
+                    @include image-size(20vw, 25vh);
+                }
             }
         }
         h2 {
@@ -342,7 +365,33 @@ main {
     color: $primary-text-color;
     font-family: $font-stack;
     width: 100%;
-    @include flex-center(row,space-evenly,center);
+    font-size: fluid-type(1.5, 1);
+    padding-bottom: 2em;
+    height: auto;
+    .gallery-img {
+        @include flex-center(row,space-evenly,center);
+        max-width: 97VW;
+        max-height: 100vh;
+        height: auto;
+        padding-bottom: 2em;
+        img {
+            @include image-size(25vw, 70vh);
+            border-radius: 1rem;
+            transition: transform 0.3s ease, filter 0.3s ease;
+            
+            &:hover {
+            transform: scale(1.1);
+            z-index: 10;
+            filter: brightness(1.2);
+            }
+        }
+
+        img:not(:hover) {
+            transition: transform 0.3s ease, filter 0.3s ease;
+            transform: scale(0.9);
+            filter: brightness(0.8);
+        }
+    }
 }
 
 footer {
@@ -359,9 +408,4 @@ footer {
 // Use the mixin in the classes
 .product-image {
     @include image-size($product-image-width, $product-image-height);
-}
-
-.gallery-img {
-    @include image-size(20vw, 25vh);
-    max-width: 90VW;
 }
