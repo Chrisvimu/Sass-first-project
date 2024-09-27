@@ -26,7 +26,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 3em;
+  height: 2em;
 }
 
 nav {
@@ -36,17 +36,23 @@ nav {
   justify-content: space-between;
   align-items: center;
   background-color: #FFDAC6;
-  color: #BABD8D;
-  padding: 0.5em;
+  color: white;
+  padding-bottom: 0.5em;
+  height: 2em;
 }
 nav p {
-  font-size: 1.5em;
+  font-size: calc(0.7rem + (0.9 - 0.7) * (100vw - 20vw) / (100 - 20));
   padding-left: 1em;
   font-weight: bold;
 }
 nav .icons {
   display: flex;
   gap: 0.8em;
+  background-color: #FFDAC6;
+}
+nav .icons button {
+  background-color: #FFDAC6;
+  border: none;
 }
 nav .icons button button {
   background: none;
@@ -54,9 +60,9 @@ nav .icons button button {
   cursor: pointer;
 }
 nav .icons button svg {
-  stroke: #BABD8D;
-  width: 2em;
-  height: 2em;
+  stroke: white;
+  width: 1.5em;
+  height: 1em;
   stroke-width: 2em;
   cursor: pointer;
   background-color: #FFDAC6;
@@ -65,8 +71,8 @@ nav .icons button svg {
 nav .icons button svg :hover {
   stroke: yellow;
   fill: pink;
-  width: 4em;
-  height: 4em;
+  width: 2em;
+  height: 2em;
 }
 
 article {
@@ -154,15 +160,18 @@ section {
 }
 section h2 {
   color: #7C6A0A;
-  font-size: calc(2rem + (3 - 2) * (100vw - 20vw) / (100 - 20));
+  font-size: calc(2rem + (2.5 - 2) * (100vw - 20vw) / (100 - 20));
   height: auto;
   font-weight: bold;
   font-style: italic;
 }
-section .healthcare h2, section .info-section .about-us h2, .info-section section .about-us h2, section .furniture h2 {
-  font-size: calc(3rem + (3.5 - 3) * (100vw - 20vw) / (100 - 20));
-  padding-bottom: 1em;
-  height: auto;
+section .healthcare h3, section .info-section .about-us h3, .info-section section .about-us h3, section .furniture h3 {
+  font-size: calc(1rem + (1.5 - 1) * (100vw - 20vw) / (100 - 20));
+}
+section .healthcare p, section .info-section .about-us p, .info-section section .about-us p, section .furniture p {
+  font-size: clamp(0.6rem, 0.6rem + (0.8 - 0.6) * (100vw - 20vw) / (100 - 20), 0.8rem);
+  text-align: justify;
+  overflow-wrap: break-word;
 }
 section .healthcare .card-section, section .info-section .about-us .card-section, .info-section section .about-us .card-section, section .furniture .card-section {
   background-color: #FFEFE7;
@@ -183,7 +192,7 @@ section .healthcare .card-section, section .info-section .about-us .card-section
 section .healthcare .product-card, section .info-section .about-us .product-card, .info-section section .about-us .product-card, section .furniture .product-card {
   background-color: #FFDAC6;
   width: 20vw;
-  height: auto;
+  height: 90vh;
   color: #7C6A0A;
   padding: 0.5rem;
   border-radius: 1rem;

@@ -82,30 +82,33 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 3em;
+    height: 2em;
 }
 nav {
     width: 100%;
     @include flex-center (row,space-between,center);
     background-color: $secundary-color;
-    color: $tertiary-color;
-    padding: 0.5em;
+    color: white;
+    padding-bottom: 0.5em;
+    height: 2em;
 
     p {
-        font-size: $paragraph-font-size;
+        font-size: fluid-type(0.7, 0.9);
         padding-left: 1em;
         font-weight: bold;
     }
     .icons {
         display:flex;
         gap: 0.8em;
-
+        background-color: $secundary-color;
         button {
             @include button-style;
+            background-color: $secundary-color;
+            border: none;
             svg {
-            stroke: $tertiary-color;
-            width: 2em;
-            height: 2em;
+            stroke: white;
+            width: 1.5em;
+            height: 1em;
             stroke-width: 2em;
             cursor: pointer;
             background-color: $secundary-color;
@@ -113,8 +116,8 @@ nav {
             :hover {
                 stroke:yellow;
                 fill: pink;
-                width: calc(2em + 2em);
-                height: calc(2em + 2em);
+                width: calc(1em + 1em);
+                height: calc(1em + 1em);
             }
             }
         }
@@ -205,17 +208,19 @@ section {
 
     h2 {
         color: $primary-text-color;
-        font-size: fluid-type(2, 3);
+        font-size: fluid-type(2, 2.5);
         height: auto;
         font-weight: bold;
         font-style: italic;
     }
     .healthcare {
-        h2{
-            font-size: fluid-type(3, 3.5);
-            padding-bottom: 1em;
-            height: auto;
-            
+        h3{
+            font-size: fluid-type(1, 1.5);
+        }
+        p {
+            font-size: clamp(0.6rem, fluid-type(0.6, 0.8), 0.8rem);
+            text-align: justify;
+            overflow-wrap: break-word; // Ensures long words break to avoid overflow
         }
         .card-section{
             background-color: $primary-color;
@@ -235,7 +240,7 @@ section {
         .product-card{
             background-color: $secundary-color;
             width: 20vw;
-            height: auto;
+            height: 90vh;
             color: $primary-text-color;
             padding: 0.5rem;
             border-radius: 1rem;
