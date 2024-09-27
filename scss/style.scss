@@ -51,6 +51,7 @@ $product-image-height: 8rem; // Example value
     }
 }
 
+/*
 * {
     box-sizing: border-box;
     margin: 0;
@@ -60,7 +61,8 @@ $product-image-height: 8rem; // Example value
     background-color: $primary-color;
     max-width: 100vw; 
     font-size: fluid-type(1, 1.5);
-  }
+}
+*/
 .container {
     max-width: 100vw; // Apply max-width to specific elements if needed
 }
@@ -335,6 +337,14 @@ main {
     }
 }
 
+.gallery {
+    background-color: $tertiary-color;
+    color: $primary-text-color;
+    font-family: $font-stack;
+    width: 100%;
+    @include flex-center(row,space-evenly,center);
+}
+
 footer {
     background-color: $primary-color;
     width: 100%;
@@ -349,4 +359,9 @@ footer {
 // Use the mixin in the classes
 .product-image {
     @include image-size($product-image-width, $product-image-height);
+}
+
+.gallery-img {
+    @include image-size(20vw, 25vh);
+    max-width: 90VW;
 }
