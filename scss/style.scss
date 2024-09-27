@@ -6,7 +6,7 @@ $font-stack: 'IBM Plex Sans' , sans-serif;
 $paragraph-font-size: 1.5em;
 $quaternary-color: #FA9500;
 $button-text-color: white;
-
+$intense-text-color: #E86424;
 // Define variables for image size
 $product-image-width: 10rem; // Example value
 $product-image-height: 8rem; // Example value
@@ -51,18 +51,18 @@ $product-image-height: 8rem; // Example value
     }
 }
 
-/*
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: $font-stack;
-    color: $primary-text-color;
-    background-color: $primary-color;
+//    color: $primary-text-color;
+//    background-color: $primary-color;
     max-width: 100vw; 
     font-size: fluid-type(1, 1.5);
 }
-*/
+
 .container {
     max-width: 100vw; // Apply max-width to specific elements if needed
 }
@@ -87,12 +87,14 @@ body {
 nav {
     width: 100%;
     @include flex-center (row,space-between,center);
-    color: $primary-text-color;
+    background-color: $secundary-color;
+    color: $tertiary-color;
     padding: 0.5em;
 
     p {
         font-size: $paragraph-font-size;
         padding-left: 1em;
+        font-weight: bold;
     }
     .icons {
         display:flex;
@@ -101,11 +103,13 @@ nav {
         button {
             @include button-style;
             svg {
-            stroke: $primary-text-color;
+            stroke: $tertiary-color;
             width: 2em;
             height: 2em;
             stroke-width: 2em;
             cursor: pointer;
+            background-color: $secundary-color;
+            margin: 0%;
             :hover {
                 stroke:yellow;
                 fill: pink;
@@ -118,20 +122,22 @@ nav {
 }
 
 article {
-  //  background-color: $primary-color;
+  background-color: $primary-color;
   @include flex-center (row,space-between,center);
-    background-color: blue;
+    background-color: $primary-color;
     color: $primary-text-color;
     font-family: $font-stack;
     padding-left: 1rem;
     padding-right: 1rem;
     width: auto;
     padding-top: 2em;
+    align-items: center;
 
     h1 {
         font-size: fluid-type(3, 3);
         padding:0%;
         margin: 0%;
+        padding-bottom: 1em;
     }
 
     p {
@@ -140,7 +146,7 @@ article {
 
     @include button-style;
     button{
-        width: 15vw;
+        width: 16vw;
         height: auto;
         background-color: $quaternary-color;
         border-radius: 15em;
@@ -150,6 +156,12 @@ article {
         font-size: clamp(1rem, 2.5vw, 2rem);
         justify-content: center;
         align-items: center;
+        margin-left: 25%;
+        &:hover {
+            transform: scale(1.01);
+            z-index: 4;
+            filter: brightness(1.2);
+            }
     }
 
     .impact-section {
@@ -158,7 +170,7 @@ article {
         font-family: $font-stack;
         padding-left: 1rem;
         padding-right: 1rem;
-        background-color: greenyellow;
+        background-color: $primary-color;
         text-align: justify;
         row-gap: 1.2rem;
         display: flex;
@@ -172,10 +184,10 @@ article {
       //  padding-left: 1rem;
       //  padding-right: 1rem;
         padding: 0.4%;
-        background-color: red;
+        background-color: $primary-color;
         img {
             width: 100%;
-            max-width: 100vw;
+            max-width: 90vw;
             overflow: hidden;
             border-radius: 10.5rem;
         }
@@ -183,7 +195,7 @@ article {
 }
 
 section {
-    background-color: green;
+    background-color: $primary-color;
     color: $primary-text-color;
     font-family: $font-stack;
     padding: 1rem;
@@ -206,7 +218,7 @@ section {
             
         }
         .card-section{
-            background-color: #FA9500;
+            background-color: $primary-color;
 //            display: flex;
             @include flex-center(row,space-evenly,center);
             width: auto;
@@ -221,7 +233,7 @@ section {
             font-size: fluid-type(1, 1.5);
         }
         .product-card{
-            background-color: purple;
+            background-color: $secundary-color;
             width: 20vw;
             height: auto;
             color: $primary-text-color;
@@ -265,12 +277,17 @@ section {
                     object-fit: cover;
                 }       
             }
+            &:hover {
+                transform: scale(1.1);
+                z-index: 10;
+                filter: brightness(1.2);
+                }
         }
     }
 }
 
 main {
-    background-color: $secundary-color;
+    background-color: $primary-color;
     color: $primary-text-color;
     font-family: $font-stack;
     padding: 1rem;
@@ -279,46 +296,59 @@ main {
 
 .furniture {
     @extend .healthcare;
-    background-color: yellow;
+    background-color: $primary-color;
     .card-section {
-        background-color: rgb(101, 45, 79);
+        background-color: $tertiary-color;
         .product-card {
-            background-color: blue;
+            background-color: $tertiary-color;
             color: white;
             .product-image {
-                background-color: royalblue;
+                background-color: $tertiary-color;
             }
             .icon {
-                background-color: rgb(176, 176, 21);
+                background-color: $tertiary-color;
             }
             h3 {
-                background-color: rgb(59, 73, 118);
+                background-color: $tertiary-color;
             }
             p{
-                background-color: yellow;
+                background-color: $tertiary-color;
             }
         }
     }
 }
 
 .info-section {
+    height: auto;
+    background-color: $primary-color;
     .about-us {
+        @include flex-center(row, space-evenly, center);
+        height: auto;
         @extend .healthcare;
         padding-bottom: 1em;
-        background-color: #293e86;
+        background-color: $primary-color;
         .mision-section {
             @include flex-center(row, space-evenly, center);
-            background-color: aqua;
+            background-color: $primary-color;
+            height: auto;
+            max-width: 92vw;
+            color: $intense-text-color;
             .earth {
-                background-color: chartreuse;
+                background-color: $primary-color;
                 gap: 1em;
-                width: 30vw;
+                width: auto;
+                max-width: 40vw;
+                color: $intense-text-color;
                 img{
-                    object-fit: cover;
+                    @include image-size(20vw, 25vh);
                 }
             }
             .innovation {
                 @extend .earth;
+                @include flex-center(column, space-evenly, center);
+                img{
+                    @include image-size(20vw, 25vh);
+                }
             }
         }
         h2 {
@@ -327,41 +357,115 @@ main {
             height: auto;
             font-weight: bold;
             font-style: italic;
+            color: $intense-text-color;
+            background-color: $primary-color;
         }
         p {
             font-size: fluid-type(2,1.5);
             text-align: center;
             color: $quaternary-color;
-
+            background-color: $primary-color;
         }
     }
 }
 
 .gallery {
-    background-color: $tertiary-color;
+    background-color: $primary-color;
     color: $primary-text-color;
     font-family: $font-stack;
     width: 100%;
-    @include flex-center(row,space-evenly,center);
+    font-size: fluid-type(1.5, 1);
+    padding-bottom: 2em;
+    height: auto;
+    .gallery-img {
+        @include flex-center(row,space-evenly,center);
+        max-width: 97VW;
+        max-height: 100vh;
+        height: auto;
+        padding-bottom: 2em;
+        img {
+            @include image-size(25vw, 70vh);
+            border-radius: 1rem;
+            transition: transform 0.3s ease, filter 0.3s ease;
+            
+            &:hover {
+            transform: scale(1.1);
+            z-index: 10;
+            filter: brightness(1.2);
+            }
+        }
+
+        img:not(:hover) {
+            transition: transform 0.3s ease, filter 0.3s ease;
+            transform: scale(0.9);
+            filter: brightness(0.8);
+        }
+    }
+}
+
+.location{
+    color: $intense-text-color;
+    h3{
+        font-size: fluid-type(3, 3.5);
+        padding-bottom: 1em;
+        height: auto;
+        font-weight: bold;
+        padding-top: 1em;
+    }
+    .map{
+        @include flex-center(row,center,center);
+        width: auto;
+        img{
+            @include image-size(90vw, 80vh);
+            border-radius: 1rem;
+        }
+    }
+    p {
+        padding-left: 8em;
+    }
 }
 
 footer {
-    background-color: $primary-color;
+    background-color: $quaternary-color;
     width: 100%;
     height: 15rem;
-    color: $primary-text-color;
+    color: $primary-color;
     font-family: $font-stack;
     font-size: fluid-type(1, 1.5);
     padding: 1rem;
+    @include flex-center(column,space-evenly,center);
+    .social-media {
+        @include flex-center(row,space-evenly,center);
+        justify-content: space-evenly;
+        width: 100%;
+        height: auto;
+        padding-top: 1em;
+        background-color: $quaternary-color;
+    }
+    p {
+        background-color: $quaternary-color;
+    }
+    h2 {
+        background-color: $quaternary-color;
+    }
+    h3 {
+        background-color: $quaternary-color;
+    }
+    img {
+        color: $primary-color;
+        font-size: 2em;
+        text-decoration: none;
+        background-color: $quaternary-color;
+        &:hover {
+            color: $secundary-color;
+            background-color: $quaternary-color;
+            cursor: pointer;
+        }
+    }
 }
 
 
 // Use the mixin in the classes
 .product-image {
     @include image-size($product-image-width, $product-image-height);
-}
-
-.gallery-img {
-    @include image-size(20vw, 25vh);
-    max-width: 90VW;
 }
