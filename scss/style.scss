@@ -469,3 +469,25 @@ footer {
 .product-image {
     @include image-size($product-image-width, $product-image-height);
 }
+
+.github-logo {
+    background-color: $quaternary-color;
+    width: 10vw; // Match the size of adjacent images
+    height: 10vh; // Match the size of adjacent images
+    border-radius: 1rem; // Match the border-radius of adjacent images
+    transition: transform 0.3s ease, filter 0.3s ease; // Add transition for hover effect
+
+    &:hover {
+        transform: scale(1.1); // Scale up on hover
+        z-index: 10; // Bring to front on hover
+        filter: brightness(1.2); // Brighten on hover
+    }
+
+    svg {
+        width: 100%; // Ensure SVG scales with the container
+        height: 100%; // Ensure SVG scales with the container
+        fill: $primary-color; // Match the primary color
+        stroke: $primary-text-color; // Match the primary text color
+        stroke-width: 0.1em; // Adjust stroke width if needed
+    }
+}

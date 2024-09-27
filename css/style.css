@@ -444,4 +444,24 @@ footer img:hover {
   height: 8rem;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.github-logo {
+  background-color: #FA9500;
+  width: 10vw;
+  height: 10vh;
+  border-radius: 1rem;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.github-logo:hover {
+  transform: scale(1.1);
+  z-index: 10;
+  filter: brightness(1.2);
+}
+.github-logo svg {
+  width: 100%;
+  height: 100%;
+  fill: #FFEFE7;
+  stroke: #7C6A0A;
+  stroke-width: 0.1em;
 }/*# sourceMappingURL=style.css.map */
