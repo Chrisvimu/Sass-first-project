@@ -76,36 +76,38 @@ body {
     font-size: fluid-type(1, 1.5);
 }
 
-.navbar {
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 3em;
-}
 nav {
     width: 100%;
     @include flex-center (row,space-between,center);
     background-color: $secundary-color;
-    color: $tertiary-color;
-    padding: 0.5em;
-
+    color: white;
+//    padding-bottom: 0.5em;
+    height: auto;
+    .navbar {
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2em;
+    }
     p {
-        font-size: $paragraph-font-size;
+        font-size: fluid-type(0.7, 0.9);
         padding-left: 1em;
         font-weight: bold;
     }
     .icons {
         display:flex;
         gap: 0.8em;
-
+        background-color: $secundary-color;
         button {
             @include button-style;
+            background-color: $secundary-color;
+            border: none;
             svg {
-            stroke: $tertiary-color;
-            width: 2em;
-            height: 2em;
+            stroke: white;
+            width: 1.5em;
+            height: 1em;
             stroke-width: 2em;
             cursor: pointer;
             background-color: $secundary-color;
@@ -113,8 +115,8 @@ nav {
             :hover {
                 stroke:yellow;
                 fill: pink;
-                width: calc(2em + 2em);
-                height: calc(2em + 2em);
+                width: calc(1em + 1em);
+                height: calc(1em + 1em);
             }
             }
         }
@@ -205,17 +207,19 @@ section {
 
     h2 {
         color: $primary-text-color;
-        font-size: fluid-type(2, 3);
+        font-size: fluid-type(2, 2.5);
         height: auto;
         font-weight: bold;
         font-style: italic;
     }
     .healthcare {
-        h2{
-            font-size: fluid-type(3, 3.5);
-            padding-bottom: 1em;
-            height: auto;
-            
+        h3{
+            font-size: fluid-type(1, 1.5);
+        }
+        p {
+            font-size: clamp(0.6rem, fluid-type(0.6, 0.8), 0.8rem);
+            text-align: justify;
+            overflow-wrap: break-word; // Ensures long words break to avoid overflow
         }
         .card-section{
             background-color: $primary-color;
@@ -235,7 +239,7 @@ section {
         .product-card{
             background-color: $secundary-color;
             width: 20vw;
-            height: auto;
+            height: 90vh;
             color: $primary-text-color;
             padding: 0.5rem;
             border-radius: 1rem;
@@ -468,4 +472,26 @@ footer {
 // Use the mixin in the classes
 .product-image {
     @include image-size($product-image-width, $product-image-height);
+}
+
+.github-logo {
+    background-color: $quaternary-color;
+    width: 10vw; // Match the size of adjacent images
+    height: 10vh; // Match the size of adjacent images
+    border-radius: 1rem; // Match the border-radius of adjacent images
+    transition: transform 0.3s ease, filter 0.3s ease; // Add transition for hover effect
+
+    &:hover {
+        transform: scale(1.1); // Scale up on hover
+        z-index: 10; // Bring to front on hover
+        filter: brightness(1.2); // Brighten on hover
+    }
+
+    svg {
+        width: 100%; // Ensure SVG scales with the container
+        height: 100%; // Ensure SVG scales with the container
+        fill: $primary-color; // Match the primary color
+        stroke: $primary-text-color; // Match the primary text color
+        stroke-width: 0.1em; // Adjust stroke width if needed
+    }
 }
