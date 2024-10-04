@@ -9,11 +9,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-
 </head>
 <body>
     <header>
-        <nav class="navbar">
+        <nav class="navbar" id="navbar">
             <p>Eco-Store</p>
             <div class="icons">
                 <button class="profile" onclick="scrollToSection('.main-section')">
@@ -264,6 +263,14 @@
                 element.scrollIntoView({ behavior: 'smooth' });
             }
         }
+
+        document.addEventListener('DOMContentLoaded', function() {
+        var navbar = document.getElementById('navbar');
+        if (navbar) {
+            navbar.style.position = 'fixed';
+            navbar.style.zIndex = '1000';
+        }
+        });
     </script>
 </body>
 </html>

@@ -20,17 +20,23 @@ body {
   font-size: calc(1rem + (1.5 - 1) * (100vw - 20vw) / (100 - 20));
 }
 
-nav {
+header {
+  position: fixed;
+  z-index: 1000;
+}
+header nav {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
   background-color: #FFDAC6;
   color: white;
   height: auto;
+  z-index: 1000;
 }
-nav .navbar {
+header nav .navbar {
   position: fixed;
   z-index: 1000;
   top: 0;
@@ -38,26 +44,26 @@ nav .navbar {
   width: 100%;
   height: 2em;
 }
-nav p {
+header nav .navbar p {
   font-size: calc(0.7rem + (0.9 - 0.7) * (100vw - 20vw) / (100 - 20));
   padding-left: 1em;
   font-weight: bold;
 }
-nav .icons {
+header nav .navbar .icons {
   display: flex;
   gap: 0.8em;
   background-color: #FFDAC6;
 }
-nav .icons button {
+header nav .navbar .icons button {
   background-color: #FFDAC6;
   border: none;
 }
-nav .icons button button {
+header nav .navbar .icons button button {
   background: none;
   border-style: none;
   cursor: pointer;
 }
-nav .icons button svg {
+header nav .navbar .icons button svg {
   stroke: white;
   width: 1.5em;
   height: 1em;
@@ -66,7 +72,7 @@ nav .icons button svg {
   background-color: #FFDAC6;
   margin: 0%;
 }
-nav .icons button svg :hover {
+header nav .navbar .icons button svg :hover {
   stroke: yellow;
   fill: pink;
   width: 2em;
@@ -183,14 +189,14 @@ section .healthcare .card-section, section .info-section .about-us .card-section
   justify-items: center;
   -moz-column-gap: 8vw;
        column-gap: 8vw;
-  row-gap: 4vh;
+  row-gap: 8vh;
   flex-wrap: wrap;
   font-size: calc(1rem + (1.5 - 1) * (100vw - 20vw) / (100 - 20));
 }
 section .healthcare .product-card, section .info-section .about-us .product-card, .info-section section .about-us .product-card, section .furniture .product-card {
   background-color: #FFDAC6;
   width: 20vw;
-  height: 90vh;
+  height: 88vh;
   color: #7C6A0A;
   padding: 0.5rem;
   border-radius: 1rem;
